@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> QR Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        
+        <h1> Enter your URL or text </h1>
+        <div class="herosec">
+            <input type="text" placeholder="Type here..." id="insub"> <br>
+            <div id="imgBox">
+                <img src="" id="qrImage">
+            </div>
+            <button class="submit-btn"  onclick="generateQR()" id="insub">Generate QR Code</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        let imgBoxs = document.getElementById("imgBox");
+        let qrImages = document.getElementById("qrImage");
+        let insubs = document.getElementById("insub");
+
+
+        function generateQR(){
+            qrImages.src =" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + insubs.value;
+
+        }
+
+    </script>
+
+</body>
+
+
+
+</html>
