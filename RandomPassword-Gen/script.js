@@ -25,4 +25,14 @@ function createPassword(){
 function copyPassword(){
     inputBox.select();
     document.execCommand("copy");
-}
+};
+
+// let qrimgs = document.getElementById("qrimg");
+let QRimages = document.getElementById("QRimage");
+let inputtexts = document.getElementById("inputtext");
+
+function generatesQR(){
+    QRimages.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + inputtexts.value;
+};
+
+        
