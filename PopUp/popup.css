@@ -1,0 +1,54 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+
+.mainbtn{
+    margin: 50px;
+    margin-left: 600px;
+   
+}
+
+button{
+    background: blue;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+
+}
+
+.poptext{
+    background: #eee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 400px;
+    margin: 50px 600px;
+    border-radius: 6px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0.1);
+    top: 0;
+    visibility: hidden;
+    
+
+}
+
+.popup-Box{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#okbtn{
+    margin: 20px;
+
+}
+
+h1{
+    margin-bottom: 100px;
+}  */
