@@ -34,20 +34,28 @@ button {
     align-items: flex-end;
     padding: 20px;
     overflow: hidden; 
-    gap: 12px;   
+    gap: 5px;   
   }
 
 .ctost{
     background: white;
     padding: 13px;
     border-radius: 3px;
-    height: 30px;
+    height: 20px;
     width: 190px;
     position: relative;
     margin: 15px 0;
     box-shadow: 0 0 20px rosybrown;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
 
+  }
 
+  @keyframes moveleft {
+    100%{
+      transform: translateX(0);
+    }
+    
   }
 
 .ctost::after{
@@ -66,4 +74,8 @@ button {
         width: 0;
     }
 
+  }
+
+  .ctost.error i{
+    background: red;
   }
