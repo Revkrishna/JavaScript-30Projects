@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.main{
+    background: linear-gradient(135deg, #5884c2, #4ce1c8 ,#858585);
+    position: relative;
+}
+.btn{
+    display: flex;
+    gap: 50px;
+    padding:130px 0 381px 0; 
+    justify-content: center;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: green;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+
+  }
+
+#toastBox{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    overflow: hidden; 
+    gap: 12px;   
+  }
+
+.ctost{
+    background: white;
+    padding: 13px;
+    border-radius: 3px;
+    height: 30px;
+    width: 190px;
+    position: relative;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rosybrown;
+
+
+  }
+
+.ctost::after{
+    content: '';
+    position: absolute; 
+    left: 0;
+    bottom: 0; 
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anim 5s linear forwards;
+  }
+
+  @keyframes anim{
+    100%{
+        width: 0;
+    }
+
+  }
