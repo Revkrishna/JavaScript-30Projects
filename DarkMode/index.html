@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="main">
+
+        <div > 
+            <img src="moon.png" id="moon" onclick="icons()">
+        </div>
+
+        <h1> dark mode & light mode theme</h1>
+        
+    </div>
+
+    <script>
+
+        var icon = document.getElementById('moon');
+
+         function icons() {
+             document.body.classList.toggle('darkMode');
+             if(document.body.classList.contains('darkMode')){
+                icon.src="moon.png";
+             }
+             else{
+                icon.src ="sun.png";
+             }
+
+        }
+       
+ 
+    </script>
+
+</body>
+
+
+</html>
+

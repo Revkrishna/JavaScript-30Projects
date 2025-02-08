@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    background: var(--primary-color) ;
+    padding: 20px 400px 230px;
+    text-align: center;
+    
+}
+
+.main h1{
+    color: var(--secondry-color);
+    margin: 50px;
+}
+
+img{
+    width: 300px;
+    
+}
+
+:root {
+    --primary-color:rgb(144, 144, 206);
+    --secondry-color:#e11212;
+}
+
+.darkMode{
+    --primary-color:rgb(48, 47, 47);
+    --secondary-color:rgb(236, 236, 76);
+}
