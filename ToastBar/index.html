@@ -12,14 +12,35 @@
 
 <body>
     <div class="main">
+
+
+  
+    <div class="Theme">
+        <div class="lightmode"><i class="fa-solid fa-sun"></i></div>
+
+    <div  class="darkMode" > <i class="fa-solid fa-moon" id="moon" onclick="icon()"></i></div>
+
+    </div>
+    <p>I have a jQuery mobile project and in order to close (most) popups I noticed I have to click twice in an area other than the popup. In these cases it seems the first click removes the #&ui-state=dialog from the URL address bar while the second actually removes the popup.
+
+        I've checked for multiple includes of the same JS file and there is only one occurrence when viewing the source. I'm refreshing the page directly so there is no chance of a second include of the JS file from navigation either. As far as I can tell (and I'm pretty sure) there are not multiple custom click events bound to the button which triggers the pop-up (Maybe jQuery Mobile behind the scenes stuff, but not custom).
+        
+        Is there a way for me to essentially listen for all click events as part of debugging and see what is going on with them? I've added breaks to the custom JS code which opens the popup, and it only executes once. But there is more going on and I don't know where it is coming from or how I can find it.
+        
+        </p>
+
+
+    <div>
         <div class="btn">
 
             <button onclick="showTost(succesmsg)">Success</button>
             <button onclick="showTost(errormsg)">Error</button>
             <button onclick="showTost(invalidmsg)">Invalid</button>
-        </div>
-
+        
+        
         <div id="toastBox"></div>
+     
+
 
     </div>
 
@@ -55,15 +76,18 @@
 
 
 
+        var icon = document.getElementById('moon');
+
+        function icon(){
+            document.body.classList.toggle('darkMode');
+
+        }
+
+
     </script>
 
 </body>
 
 
-
-
-
-
-
-
 </html>
+
