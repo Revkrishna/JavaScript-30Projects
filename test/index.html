@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        video, canvas {
+            display: block;
+            margin: auto;
+            border: 2px solid black;
+        }
+        #shirt-container {
+            position: relative;
+            display: inline-block;
+        }
+        #shirt-img {
+            width: 300px;
+        }
+        #captured-head {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Try On Your Shirt</h1>
+    <video id="video" width="300" height="225" autoplay></video>
+    <button onclick="captureHead()">Capture Head</button>
+    <canvas id="canvas" width="300" height="225" style="display: none;"></canvas>
+    
+    <div id="shirt-container">
+        <img id="shirt-img" src="shirt.png" alt="Shirt">
+        <img id="captured-head" src="" alt="Your Head" style="display: none;">
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const headImg = document.getElementById('captured-head');
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => { video.srcObject = stream; })
+            .catch(err => console.error("Error accessing webcam:", err));
+
+        function captureHead() {
+            context.drawImage(video, 100, 40, 100, 100, 0, 0, 100, 100);
+            headImg.src = canvas.toDataURL('image/png');
+            headImg.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
